@@ -6,7 +6,21 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		D304D2842DB544D00031F6D7 /* ActivityKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D304D2832DB544D00031F6D7 /* ActivityKit.framework */; };
+		D312062A2DB444F100A89741 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D31206292DB444F100A89741 /* WidgetKit.framework */; };
+		D312062C2DB444F100A89741 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D312062B2DB444F100A89741 /* SwiftUI.framework */; };
+		D312063D2DB444F300A89741 /* DynamicTimeWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D31206272DB444F100A89741 /* DynamicTimeWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
+		D312063B2DB444F300A89741 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D3C03CCB2DB440CC002E1171 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D31206262DB444F100A89741;
+			remoteInfo = DynamicTimeWidgetExtension;
+		};
 		D3C03CE12DB440CE002E1171 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D3C03CCB2DB440CC002E1171 /* Project object */;
@@ -23,15 +37,61 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		D31206422DB444F300A89741 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				D312063D2DB444F300A89741 /* DynamicTimeWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		D304D2832DB544D00031F6D7 /* ActivityKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ActivityKit.framework; path = System/Library/Frameworks/ActivityKit.framework; sourceTree = SDKROOT; };
+		D31206272DB444F100A89741 /* DynamicTimeWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = DynamicTimeWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		D31206292DB444F100A89741 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		D312062B2DB444F100A89741 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		D3C03CD32DB440CC002E1171 /* DynamicTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DynamicTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3C03CE02DB440CE002E1171 /* DynamicTimeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DynamicTimeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3C03CEA2DB440CE002E1171 /* DynamicTimeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DynamicTimeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		D312063E2DB444F300A89741 /* Exceptions for "DynamicTimeWidget" folder in "DynamicTimeWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = D31206262DB444F100A89741 /* DynamicTimeWidgetExtension */;
+		};
+		D31206462DB4482E00A89741 /* Exceptions for "DynamicTime" folder in "DynamicTimeWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				TimeAttributes.swift,
+			);
+			target = D31206262DB444F100A89741 /* DynamicTimeWidgetExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		D312062D2DB444F100A89741 /* DynamicTimeWidget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				D312063E2DB444F300A89741 /* Exceptions for "DynamicTimeWidget" folder in "DynamicTimeWidgetExtension" target */,
+			);
+			path = DynamicTimeWidget;
+			sourceTree = "<group>";
+		};
 		D3C03CD52DB440CC002E1171 /* DynamicTime */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				D31206462DB4482E00A89741 /* Exceptions for "DynamicTime" folder in "DynamicTimeWidgetExtension" target */,
+			);
 			path = DynamicTime;
 			sourceTree = "<group>";
 		};
@@ -48,6 +108,16 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		D31206242DB444F100A89741 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D304D2842DB544D00031F6D7 /* ActivityKit.framework in Frameworks */,
+				D312062C2DB444F100A89741 /* SwiftUI.framework in Frameworks */,
+				D312062A2DB444F100A89741 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D3C03CD02DB440CC002E1171 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -72,12 +142,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D31206282DB444F100A89741 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D304D2832DB544D00031F6D7 /* ActivityKit.framework */,
+				D31206292DB444F100A89741 /* WidgetKit.framework */,
+				D312062B2DB444F100A89741 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D3C03CCA2DB440CC002E1171 = {
 			isa = PBXGroup;
 			children = (
 				D3C03CD52DB440CC002E1171 /* DynamicTime */,
 				D3C03CE32DB440CE002E1171 /* DynamicTimeTests */,
 				D3C03CED2DB440CE002E1171 /* DynamicTimeUITests */,
+				D312062D2DB444F100A89741 /* DynamicTimeWidget */,
+				D31206282DB444F100A89741 /* Frameworks */,
 				D3C03CD42DB440CC002E1171 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,6 +170,7 @@
 				D3C03CD32DB440CC002E1171 /* DynamicTime.app */,
 				D3C03CE02DB440CE002E1171 /* DynamicTimeTests.xctest */,
 				D3C03CEA2DB440CE002E1171 /* DynamicTimeUITests.xctest */,
+				D31206272DB444F100A89741 /* DynamicTimeWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,6 +178,28 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		D31206262DB444F100A89741 /* DynamicTimeWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D312063F2DB444F300A89741 /* Build configuration list for PBXNativeTarget "DynamicTimeWidgetExtension" */;
+			buildPhases = (
+				D31206232DB444F100A89741 /* Sources */,
+				D31206242DB444F100A89741 /* Frameworks */,
+				D31206252DB444F100A89741 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				D312062D2DB444F100A89741 /* DynamicTimeWidget */,
+			);
+			name = DynamicTimeWidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = DynamicTimeWidgetExtension;
+			productReference = D31206272DB444F100A89741 /* DynamicTimeWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		D3C03CD22DB440CC002E1171 /* DynamicTime */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D3C03CF42DB440CE002E1171 /* Build configuration list for PBXNativeTarget "DynamicTime" */;
@@ -102,10 +207,12 @@
 				D3C03CCF2DB440CC002E1171 /* Sources */,
 				D3C03CD02DB440CC002E1171 /* Frameworks */,
 				D3C03CD12DB440CC002E1171 /* Resources */,
+				D31206422DB444F300A89741 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				D312063C2DB444F300A89741 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				D3C03CD52DB440CC002E1171 /* DynamicTime */,
@@ -173,6 +280,9 @@
 				LastSwiftUpdateCheck = 1630;
 				LastUpgradeCheck = 1630;
 				TargetAttributes = {
+					D31206262DB444F100A89741 = {
+						CreatedOnToolsVersion = 16.3;
+					};
 					D3C03CD22DB440CC002E1171 = {
 						CreatedOnToolsVersion = 16.3;
 					};
@@ -203,11 +313,19 @@
 				D3C03CD22DB440CC002E1171 /* DynamicTime */,
 				D3C03CDF2DB440CE002E1171 /* DynamicTimeTests */,
 				D3C03CE92DB440CE002E1171 /* DynamicTimeUITests */,
+				D31206262DB444F100A89741 /* DynamicTimeWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		D31206252DB444F100A89741 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D3C03CD12DB440CC002E1171 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -232,6 +350,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		D31206232DB444F100A89741 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D3C03CCF2DB440CC002E1171 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -256,6 +381,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		D312063C2DB444F300A89741 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D31206262DB444F100A89741 /* DynamicTimeWidgetExtension */;
+			targetProxy = D312063B2DB444F300A89741 /* PBXContainerItemProxy */;
+		};
 		D3C03CE22DB440CE002E1171 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D3C03CD22DB440CC002E1171 /* DynamicTime */;
@@ -269,6 +399,64 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		D31206402DB444F300A89741 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = R29WN6MCN4;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DynamicTimeWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = DynamicTimeWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.albertopaz.DynamicTime.DynamicTimeWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D31206412DB444F300A89741 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = R29WN6MCN4;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DynamicTimeWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = DynamicTimeWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.albertopaz.DynamicTime.DynamicTimeWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		D3C03CF22DB440CE002E1171 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -322,7 +510,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -380,7 +568,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -400,11 +588,13 @@
 				DEVELOPMENT_TEAM = R29WN6MCN4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -428,11 +618,13 @@
 				DEVELOPMENT_TEAM = R29WN6MCN4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -454,7 +646,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = R29WN6MCN4;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.albertopaz.DynamicTimeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -473,7 +665,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = R29WN6MCN4;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.albertopaz.DynamicTimeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -491,6 +683,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = R29WN6MCN4;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.albertopaz.DynamicTimeUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -508,6 +701,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = R29WN6MCN4;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.albertopaz.DynamicTimeUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -521,6 +715,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		D312063F2DB444F300A89741 /* Build configuration list for PBXNativeTarget "DynamicTimeWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D31206402DB444F300A89741 /* Debug */,
+				D31206412DB444F300A89741 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		D3C03CCE2DB440CC002E1171 /* Build configuration list for PBXProject "DynamicTime" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
