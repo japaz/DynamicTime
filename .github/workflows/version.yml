@@ -1,0 +1,38 @@
+name: Auto Version Bump
+
+on:
+  push:
+    branches: [ main, master ]
+    paths-ignore:
+      - '**/*.md'
+      - '.github/**'
+
+jobs:
+  version-bump:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      
+      - name: Bump version and create tag
+        id: bump_version
+        uses: anothrNick/github-tag-action@1.64.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          WITH_V: true
+          DEFAULT_BUMP: patch
+      
+      - name: Create Release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ steps.bump_version.outputs.new_tag }}
+          release_name: Release ${{ steps.bump_version.outputs.new_tag }}
+          body: |
+            Changes in this Release:
+            ${{ github.event.head_commit.message }}
+          draft: false
+          prerelease: false

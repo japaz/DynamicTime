@@ -1,0 +1,24 @@
+name: Swift Lint
+
+on:
+  push:
+    branches: [ main, master, develop ]
+    paths:
+      - '**/*.swift'
+  pull_request:
+    branches: [ main, master ]
+    paths:
+      - '**/*.swift'
+
+jobs:
+  swiftlint:
+    name: SwiftLint
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: GitHub Action for SwiftLint
+        uses: norio-nomura/action-swiftlint@3.2.1
+        with:
+          args: --strict
