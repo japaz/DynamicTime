@@ -76,6 +76,14 @@
 			);
 			target = D31206262DB444F100A89741 /* DynamicTimeWidgetExtension */;
 		};
+		D36721F32E0713DF00130316 /* Exceptions for "DynamicTime" folder in "DynamicTime" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+				Info.plist.bak,
+			);
+			target = D3C03CD22DB440CC002E1171 /* DynamicTime */;
+		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -90,6 +98,7 @@
 		D3C03CD52DB440CC002E1171 /* DynamicTime */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
+				D36721F32E0713DF00130316 /* Exceptions for "DynamicTime" folder in "DynamicTime" target */,
 				D31206462DB4482E00A89741 /* Exceptions for "DynamicTime" folder in "DynamicTimeWidgetExtension" target */,
 			);
 			path = DynamicTime;
